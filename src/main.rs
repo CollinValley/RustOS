@@ -4,6 +4,7 @@
 
 #[macro_use]
 extern crate blog_os;
+extern crate x86_64;
 
 use core::panic::PanicInfo;
 
@@ -20,9 +21,9 @@ pub extern "C" fn _start() -> ! {
     // x86_64::instructions::int3();
 
     // trigger a page fault
-    unsafe {
-        *(0xdeadbeef as *mut u64) = 42; //scary
-    };
+//    unsafe {
+ //       *(0xdeadbeef as *mut u64) = 42; //scary
+  //  };
 
     println!("It did not crash!");
     loop {}

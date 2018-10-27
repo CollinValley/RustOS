@@ -17,9 +17,9 @@ extern crate std;
 // We need to add `pub` here to make them accessible from the outside
 #[macro_use]
 pub mod vga_buffer;
-pub mod serial;
-pub mod interrupts; //must be after vga_buffer since we use its print macros
 pub mod gdt;
+pub mod interrupts; //must be after vga_buffer since we use its print macros
+pub mod serial;
 
 /// Exit Function
 ///
